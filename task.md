@@ -7,7 +7,7 @@
 - [x] Control Structures (if/else, loops)
 - [x] Functions and Parameters
 - [x] List Comprehensions
-- [ ] Exception Handling
+- [x] Exception Handling
 
 ## 2. Basic Data Structures
 - [ ] Arrays and Lists
@@ -79,6 +79,6 @@
 
 ## Progress Tracking
 - Date Started: 2025-04-13
-- Current Focus: Exception Handling
-- Completed Topics: [4/40]
-- Last Updated: 2025-04-14
+- Current Focus: Basic Data Structures - Lists
+- Completed Topics: [5/40]
+- Last Updated: 2025-04-15

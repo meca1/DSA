@@ -27,12 +27,21 @@ def ejemplo_multiple_except():
 
 def ejemplo_raise():
     """Ejemplo de lanzar excepciones personalizadas"""
-    edad = int(input("Ingresa tu edad: "))
-    if edad < 0:
-        raise ValueError("La edad no puede ser negativa")
-    if edad > 120:
-        raise ValueError("La edad parece no ser válida")
-    print(f"Tu edad es: {edad}")
+    try:
+        edad = int(input("Ingresa tu edad: "))
+        if edad < 0:
+            raise ValueError("La edad no puede ser negativa")
+        if edad > 120:
+            raise ValueError("La edad parece no ser válida")
+        print(f"Tu edad es: {edad}")
+    except ValueError:
+        if edad < 0:
+            print('Error: La edad no puede ser negativa')
+        else:
+            print('Error: la edad no es valida')
+    finally:
+        print('intenrtalo de nuevo')
+
 
 def ejercicio_1():
     """
@@ -42,7 +51,20 @@ def ejercicio_1():
     - ZeroDivisionError: si el denominador es cero
     """
     # TODO: Implementa la función dividir aquí
-    pass
+
+    try:
+
+        numero = int(input('Ingrese el numero que sera dividido'))
+        divisor = int(input('Ingrese el numero divisor'))
+
+        return numero / divisor
+    except ValueError:
+        print('ingrese un numero valido')
+    except ZeroDivisionError:
+        print('no se puede dividir por cero')
+    finally:
+        print('intenrtalo de nuevo')
+
 
 def ejercicio_2():
     """
@@ -51,8 +73,17 @@ def ejercicio_2():
     - FileNotFoundError: si el archivo no existe
     - PermissionError: si no hay permisos para leer el archivo
     """
-    # TODO: Implementa la función leer_archivo aquí
-    pass
+    try:
+        with open('01_variables_and_types.py', 'r') as archivo:
+            contenido =  archivo.read()
+            return contenido
+    except FileNotFoundError:
+        print('Error de file don\'t exits')
+    except PermissionError:
+        print('Error you don\'t have permisions')
+    finally:
+        print('intenrtalo de nuevo')
+    
 
 if __name__ == "__main__":
     print("=== Ejemplo Básico de Try-Except ===")
