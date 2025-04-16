@@ -10,10 +10,10 @@
 - [x] Exception Handling
 
 ## 2. Basic Data Structures
-- [ ] Arrays and Lists
-  - [ ] Basic operations (insert, delete, traverse)
-  - [ ] List slicing and operations
-  - [ ] Practice: Array manipulation problems
+- [x] Arrays and Lists
+  - [x] Basic operations (insert, delete, traverse)
+  - [x] List slicing and operations
+  - [x] Practice: Array manipulation problems
 - [ ] Strings
   - [ ] String methods and operations
   - [ ] Practice: String manipulation problems
@@ -79,6 +79,6 @@
 
 ## Progress Tracking
 - Date Started: 2025-04-13
-- Current Focus: Basic Data Structures - Lists
-- Completed Topics: [5/40]
-- Last Updated: 2025-04-15
+- Current Focus: Basic Data Structures - Strings
+- Completed Topics: [6/40]
+- Last Updated: 2025-04-16
