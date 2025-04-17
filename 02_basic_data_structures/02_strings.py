@@ -5,6 +5,9 @@ Este archivo cubre los siguientes temas:
 2. Practice: String manipulation problems
 """
 
+from enum import EJECT
+
+
 def string_methods():
     """Métodos y operaciones con strings"""
     print("=== 1. String Methods and Operations ===")
@@ -66,8 +69,15 @@ def ejercicio_1(texto):
     Retornar un diccionario con los caracteres como claves y las frecuencias como valores.
     Ejemplo: "hello" -> {'h': 1, 'e': 1, 'l': 2, 'o': 1}
     """
-    # TODO: Implementa el conteo de frecuencia de caracteres
-    pass
+    acum = {}
+
+    for i in texto:
+        if i not in acum:
+            acum[i] = 1
+        else:
+            acum[i] += 1 
+
+    print(f"frecuencia '{acum}'")
 
 def ejercicio_2(texto):
     """
@@ -76,8 +86,16 @@ def ejercicio_2(texto):
     Ignorar espacios, puntuación y diferencias entre mayúsculas y minúsculas.
     Ejemplo: "Anita lava la tina" -> True
     """
-    # TODO: Implementa la verificación de palíndromo
-    pass
+
+    limpio = ''
+    for c in texto:
+        if c.isalnum():
+            limpio += c.lower()
+    # Invertir el texto limpio
+    invertido = ''
+    for i in range(len(limpio)-1, -1, -1):
+        invertido += limpio[i]
+    print(limpio == invertido)
 
 if __name__ == "__main__":
     # Demostración de métodos de string
@@ -91,9 +109,11 @@ if __name__ == "__main__":
     print(f"\nEjercicio 1 - Frecuencia de caracteres:")
     print(f"Texto: '{texto}'")
     print("Completa ejercicio_1() para contar la frecuencia de cada carácter")
+    print(ejercicio_1(texto))
     
     # Ejercicio 2: Palíndromo
     palindromo = "Anita lava la tina"
     print(f"\nEjercicio 2 - Verificar palíndromo:")
     print(f"Texto: '{palindromo}'")
     print("Completa ejercicio_2() para verificar si es un palíndromo")
+    ejercicio_2(palindromo)
